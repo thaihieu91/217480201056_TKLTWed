@@ -1,0 +1,39 @@
+.red {
+    color: red;
+}
+
+.blue {
+    color: blue;
+}
+
+.green {
+    color: green;
+}
+
+.highlight {
+    background-color: yellow;
+    font-weight: bold;
+}
+
+.highlight2 {
+    color: blue;
+    font-weight: bold;
+}
+
+.highlight3 {
+    color: green;
+    font-weight: bold;
+}
+
+.class14 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.class12 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 12px;
+    font-weight: bold;
+    background-color: yellow;
+}

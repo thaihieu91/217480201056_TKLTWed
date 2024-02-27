@@ -1,0 +1,28 @@
+body {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 14px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    color: black; /* Màu chữ cho toàn bộ bảng */
+}
+
+th, td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: center;
+}
+
+.light-bg {
+    background-color: #f0f0f0; /* Màu nền hơi đậm */
+}
+
+.dark-bg {
+    background-color: #cccccc; /* Màu nền đậm */
+}
+
+.bold {
+    font-weight: bold;
+}
