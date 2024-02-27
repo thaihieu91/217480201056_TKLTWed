@@ -1,0 +1,22 @@
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 8px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li a {
+    color: white;
+}
+
+.td1 {
+    background-color: brown;
+}
+
+.td2 {
+    background-color: rgb(209, 165, 165);
+}

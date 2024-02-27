@@ -1,0 +1,25 @@
+body {
+    position: relative;
+    background-color: yellow;
+}
+
+.container {
+    position: absolute;
+    display: inline-block;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.heading {
+    text-align: center;
+    color: red;
+}
+
+.ph {
+    margin: 4px 0;
+    text-align: justify;
+}
+
+ol > li {
+    margin-top: 8px;
+}
