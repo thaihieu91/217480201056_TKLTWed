@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bài tập JavaScript 1A</title>
+</head>
+<body>
+    <script>
+        var Ten, Tuoi; // Khai báo 2 biến để lưu tên và tuổi
+        Ten = prompt("Bạn hãy nhập vào tên", "");
+        Tuoi = prompt("Bạn hãy nhập vào tuổi", "");
+
+        // Sử dụng hàm document.write để xuất ra trang web
+        document.write("<p>Chào bạn: <strong>" + Ten + "</strong></p>");
+        document.write("<p>Tuổi của bạn là: <u>" + Tuoi + "</u></p>");
+    </script>
+</body>
+</html>

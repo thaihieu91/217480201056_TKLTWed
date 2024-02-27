@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Thay đổi giá trị của thuộc tính</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <h2>Hãy nhập hai số và click vào nút Tính tổng</h2>
+    <input type="text" name="SoHang1"> +
+    <input type="text" name="SoHang2"> =
+    <input type="text" name="KetQua">
+    <input type="button" value="Tính tổng" onclick="calculateSum()">
+
+    <script>
+        function calculateSum() {
+            // Lấy giá trị từ hai hộp text SoHang1 và SoHang2 và chuyển sang dạng số
+            var soHang1 = parseFloat(document.getElementsByName("SoHang1")[0].value);
+            var soHang2 = parseFloat(document.getElementsByName("SoHang2")[0].value);
+
+            // Tính tổng
+            var ketQua = soHang1 + soHang2;
+
+            // Gán kết quả vào hộp text KetQua
+            document.getElementsByName("KetQua")[0].value = ketQua;
+        }
+    </script>
+</body>
+</html>

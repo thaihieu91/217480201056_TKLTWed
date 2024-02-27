@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Office Equipment List</title>
+</head>
+<body>
+    <h2>Office Equipment List</h2>
+    <label for="device">Enter device name:</label>
+    <input type="text" id="device">
+    <button onclick="addDevice()">Add Device</button>
+    <br><br>
+    <table id="deviceTable" border="1">
+        <thead>
+            <tr>
+                <th>No.</th>
+                <th>Device Name</th>
+            </tr>
+        </thead>
+        <tbody id="deviceList">
+            <!-- Device list will be displayed here -->
+        </tbody>
+    </table>
+
+    <script>
+        let devices = []; // Mảng chứa danh sách thiết bị
+
+        function addDevice() {
+            let deviceInput = document.getElementById("device");
+            let deviceName = deviceInput.value.trim();
+
+            if (deviceName !== "") {
+                devices.push(deviceName); // Thêm thiết bị vào mảng
+
+                // Hiển thị lại danh sách thiết bị dưới dạng bảng
+                displayDevices();
+                
+                // Xóa nội dung trong input sau khi thêm
+                deviceInput.value = "";
+            }
+        }
+
+        function displayDevices() {
+            let deviceListTable = document.getElementById("deviceList");
+            deviceListTable.innerHTML = ""; // Xóa nội dung cũ của bảng
+
+            // Hiển thị danh sách thiết bị trong mảng dưới dạng bảng
+            devices.forEach(function(device, index) {
+                let row = document.createElement("tr");
+                let numberCell = document.createElement("td");
+                numberCell.textContent = index + 1;
+                let nameCell = document.createElement("td");
+                nameCell.textContent = device;
+
+                row.appendChild(numberCell);
+                row.appendChild(nameCell);
+                deviceListTable.appendChild(row);
+            });
+        }
+    </script>
+</body>
+</html>

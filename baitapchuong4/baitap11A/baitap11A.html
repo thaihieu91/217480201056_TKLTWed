@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Thay màu nền bằng click chuột</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head>
+<body>
+    <h2>Thay đổi màu nền sử dụng đối tượng document</h2>
+    <label for="colorSelect">Chọn màu:</label>
+    <select id="colorSelect">
+        <option value="blue">Xanh</option>
+        <option value="red">Đỏ</option>
+        <option value="green">Xanh lá cây</option>
+        <option value="yellow">Vàng</option>
+        <option value="purple">Tím</option>
+        <option value="orange">Cam</option>
+    </select>
+    <button onclick="changeBgColor()">Thay đổi màu nền</button>
+
+    <script>
+        function changeBgColor() {
+            var colorSelect = document.getElementById("colorSelect");
+            var selectedColor = colorSelect.value;
+            document.bgColor = selectedColor;
+        }
+    </script>
+</body>
+</html>

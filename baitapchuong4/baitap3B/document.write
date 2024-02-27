@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bài tập JavaScript 3B</title>
+</head>
+<body>
+    <h2>Tạo button và hiển thị thông báo bằng JavaScript</h2>
+    <br>
+    <input type="button" name="Hello" value="Hello" onclick="showMessage();">
+    <input type="text" name="msg03" value="Hello Everybody" readonly>
+    
+    <script>
+        // Hàm hiển thị thông báo khi nhấn nút Hello
+        function showMessage() {
+            var msg = "Hello Everybody, I am studying web design with JavaScript";
+            document.write(msg);
+        }
+    </script>
+</body>
+</html>

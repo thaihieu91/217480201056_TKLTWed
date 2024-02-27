@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hiển thị ngày, tháng, năm trên trang web</title>
+</head>
+<body>
+    <script>
+        var currentDate = new Date();
+        var day = currentDate.getDate();
+        var month = currentDate.getMonth() + 1; // Vì tháng bắt đầu từ 0, nên cần cộng thêm 1
+        var year = currentDate.getFullYear();
+
+        document.write("Ngày hôm nay là: " + day + "/" + month + "/" + year);
+    </script>
+</body>
+</html>
+

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sắp xếp mảng</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head>
+<body>
+    <script language="JavaScript">
+        var Soluong, i;
+        var DS = new Array(100); // Khai báo mảng DS, có thể lưu tối đa là 100 phần tử
+        Soluong = prompt("Bạn cần nhập bao nhiêu người:", 5);
+
+        // Nhập danh sách họ tên và lưu vào mảng DS
+        for (i = 0; i < Soluong; i++) {
+            DS[i] = prompt("Nhập vào họ tên:", "");
+        }
+
+        // Sắp xếp mảng theo thứ tự Alphabet
+        DS.sort();
+
+        // Hiển thị kết quả sau khi sắp xếp
+        document.write("<h1>Danh sách đã sắp xếp là </h1>");
+        for (i = 0; i < Soluong; i++) {
+            document.write(DS[i] + "<br>"); // Xuống dòng sau mỗi tên
+        }
+    </script>
+</body>
+</html>
