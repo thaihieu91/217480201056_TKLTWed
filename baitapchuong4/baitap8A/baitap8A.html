@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mở trang web bằng hàm open của đối tượng window</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head>
+<body>
+
+<script language="JavaScript">
+    var luaChon = prompt("Bạn hãy nhập vào một số để mở trang web:", "1");
+    var url;
+
+    switch (luaChon) {
+        case "1":
+            url = "http://blu.edu.vn";
+            break;
+        case "2":
+            url = "http://ctu.edu.vn";
+            break;
+        case "3":
+            url = "https://vndoc.com";
+            break;
+        default:
+            url = "https://meta.vn";
+    }
+
+    if (!isNaN(parseInt(luaChon))) {
+        window.open(url);
+    }
+</script>
+
+</body>
+</html>

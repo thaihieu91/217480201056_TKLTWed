@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calculator</title>
+    <meta charset="UTF-8">
+    <script>
+        function tinhToan() {
+            var soHang1 = parseFloat(document.getElementById('SoHang1').value);
+            var soHang2 = parseFloat(document.getElementById('SoHang2').value);
+            var ketQua = document.getElementById('KetQua');
+
+            var selectedOperation = document.querySelector('input[name="operation"]:checked').value;
+
+            switch (selectedOperation) {
+                case 'cong':
+                    ketQua.value = soHang1 + soHang2;
+                    break;
+                case 'tru':
+                    ketQua.value = soHang1 - soHang2;
+                    break;
+                case 'nhan':
+                    ketQua.value = soHang1 * soHang2;
+                    break;
+                case 'chia':
+                    if (soHang2 === 0) {
+                        ketQua.value = "Không thể chia cho 0.";
+                    } else {
+                        ketQua.value = soHang1 / soHang2;
+                    }
+                    break;
+                default:
+                    ketQua.value = "Vui lòng chọn phép tính.";
+            }
+        }
+    </script>
+</head>
+<body>
+
+<input type="text" id="SoHang1"> <br>
+<input type="text" id="SoHang2"> <br>
+<input type="text" id="KetQua" readonly> <br>
+
+<input type="radio" name="operation" value="cong"> Cộng
+<input type="radio" name="operation" value="tru"> Trừ
+<input type="radio" name="operation" value="nhan"> Nhân
+<input type="radio" name="operation" value="chia"> Chia <br>
+
+<input type="button" value="Tính" onclick="tinhToan()"> <br>
+
+</body>
+</html>

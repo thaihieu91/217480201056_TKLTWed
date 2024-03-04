@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Count Characters</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <script>
+        function KiemTra() {
+            var noiDung = document.getElementById('NoiDung').value;
+            var soKyTu = document.getElementById('SoKyTu');
+
+            if (noiDung.length > 200) {
+                alert("Bạn đã gõ quá số ký tự cho phép!");
+                soKyTu.value = 200; // Giới hạn số ký tự là 200
+            } else {
+                soKyTu.value = noiDung.length;
+            }
+        }
+    </script>
+</head>
+<body style="font-family: arial;">
+
+Số ký tự đã gõ: <input type="text" id="SoKyTu" readonly> <br>
+<textarea id="NoiDung" name="NoiDung" cols="50" rows="10" onkeyup="KiemTra()"></textarea>
+
+</body>
+</html>

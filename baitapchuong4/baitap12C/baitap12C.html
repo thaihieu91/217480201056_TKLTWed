@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Hiển thị Họ và Tên</title>
+</head>
+<body>
+
+<input type="text" name="Ho" value="Họ">
+<input type="text" name="Ten" value="Tên">
+<button onclick="hienthi()">Hiển thị</button>
+<br>
+<input type="text" id="Hoten" readonly>
+
+<script>
+function hienthi() {
+  var ho = document.getElementsByName('Ho')[0].value;
+  var ten = document.getElementsByName('Ten')[0].value;
+  var hoten = ho + ' ' + ten;
+  document.getElementById('Hoten').value = hoten;
+}
+</script>
+
+</body>
+</html>

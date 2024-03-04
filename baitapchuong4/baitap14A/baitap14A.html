@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calculator</title>
+    <meta charset="UTF-8">
+    <script>
+        function cong() {
+            var soHang1 = parseFloat(document.getElementById('SoHang1').value);
+            var soHang2 = parseFloat(document.getElementById('SoHang2').value);
+            document.getElementById('KetQua').value = soHang1 + soHang2;
+        }
+
+        function tru() {
+            var soHang1 = parseFloat(document.getElementById('SoHang1').value);
+            var soHang2 = parseFloat(document.getElementById('SoHang2').value);
+            document.getElementById('KetQua').value = soHang1 - soHang2;
+        }
+
+        function nhan() {
+            var soHang1 = parseFloat(document.getElementById('SoHang1').value);
+            var soHang2 = parseFloat(document.getElementById('SoHang2').value);
+            document.getElementById('KetQua').value = soHang1 * soHang2;
+        }
+
+        function chia() {
+            var soHang1 = parseFloat(document.getElementById('SoHang1').value);
+            var soHang2 = parseFloat(document.getElementById('SoHang2').value);
+            if (soHang2 === 0) {
+                alert("Không thể chia cho 0.");
+            } else {
+                document.getElementById('KetQua').value = soHang1 / soHang2;
+            }
+        }
+    </script>
+</head>
+<body>
+
+<input type="text" id="SoHang1"> <br>
+<input type="text" id="SoHang2"> <br>
+<input type="text" id="KetQua" readonly> <br>
+
+<input type="button" value="Cộng" onclick="cong()">
+<input type="button" value="Trừ" onclick="tru()">
+<input type="button" value="Nhân" onclick="nhan()">
+<input type="button" value="Chia" onclick="chia()">
+
+</body>
+</html>
