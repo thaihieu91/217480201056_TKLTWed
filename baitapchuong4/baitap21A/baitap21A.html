@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calculator</title>
+    <meta charset="UTF-8">
+    <script>
+        function calculate(operation) {
+            var so01 = parseFloat(document.getElementById('So01').value);
+            var so02 = parseFloat(document.getElementById('So02').value);
+            var ketqua = document.getElementById('Ketqua');
+
+            if (isNaN(so01) || isNaN(so02)) {
+                ketqua.value = "Vui lòng nhập số hợp lệ.";
+                return;
+            }
+
+            switch (operation) {
+                case 'add':
+                    ketqua.value = so01 + so02;
+                    break;
+                case 'subtract':
+                    ketqua.value = so01 - so02;
+                    break;
+                case 'multiply':
+                    ketqua.value = so01 * so02;
+                    break;
+                case 'divide':
+                    if (so02 === 0) {
+                        ketqua.value = "Không thể chia cho 0.";
+                    } else {
+                        ketqua.value = so01 / so02;
+                    }
+                    break;
+                default:
+                    ketqua.value = "Phép toán không hợp lệ.";
+            }
+        }
+    </script>
+</head>
+<body>
+
+<input type="text" id="So01"> <br>
+<input type="text" id="So02"> <br>
+<input type="button" value="Cộng" onclick="calculate('add')"> 
+<input type="button" value="Trừ" onclick="calculate('subtract')"> 
+<input type="button" value="Nhân" onclick="calculate('multiply')"> 
+<input type="button" value="Chia" onclick="calculate('divide')"> <br>
+<input type="text" id="Ketqua" readonly>
+
+</body>
+</html>

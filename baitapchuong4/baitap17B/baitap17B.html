@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chọn màu nền</title>
+</head>
+<body>
+
+<h2>Bạn hãy chọn màu nền:</h2>
+<form>
+    <input type="radio" id="yellow" name="color" value="yellow" onchange="changeColor(this.value)">
+    <label for="yellow">Màu vàng</label><br>
+    <input type="radio" id="green" name="color" value="green" onchange="changeColor(this.value)">
+    <label for="green">Màu xanh lá cây</label><br>
+    <input type="radio" id="brown" name="color" value="brown" onchange="changeColor(this.value)">
+    <label for="brown">Màu nâu</label><br>
+    <input type="radio" id="magenta" name="color" value="magenta" onchange="changeColor(this.value)">
+    <label for="magenta">Màu magenta</label><br>
+</form>
+
+<script>
+    function changeColor(color) {
+        document.body.style.backgroundColor = color;
+    }
+</script>
+
+</body>
+</html>

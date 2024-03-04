@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calculator</title>
+    <meta charset="UTF-8">
+    <script>
+        function appendValue(value) {
+            document.getElementById('Ketqua').value += value;
+        }
+
+        function clearResult() {
+            document.getElementById('Ketqua').value = '';
+        }
+    </script>
+</head>
+<body>
+
+<input type="text" id="Ketqua" readonly> <br>
+
+<button onclick="appendValue('1')">1</button>
+<button onclick="appendValue('2')">2</button>
+<button onclick="appendValue('3')">3</button>
+<button onclick="appendValue('+')">+</button> <br>
+
+<button onclick="appendValue('4')">4</button>
+<button onclick="appendValue('5')">5</button>
+<button onclick="appendValue('6')">6</button>
+<button onclick="appendValue('-')">-</button> <br>
+
+<button onclick="appendValue('7')">7</button>
+<button onclick="appendValue('8')">8</button>
+<button onclick="appendValue('9')">9</button>
+<button onclick="appendValue('*')">*</button> <br>
+
+<button onclick="appendValue('0')">0</button>
+<button onclick="appendValue('.')">.</button>
+<button onclick="appendValue('/')">/</button>
+<button onclick="clearResult()">C</button> <br>
+
+<button onclick="calculateResult()">=</button>
+
+<script>
+    function calculateResult() {
+        var expression = document.getElementById('Ketqua').value;
+        var result = eval(expression);
+        document.getElementById('Ketqua').value = result;
+    }
+</script>
+
+</body>
+</html>
