@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bài tập JavaScript 4B</title>
+</head>
+<body>
+
+<button name="hoten" value="Ho ten" onclick="displayHoTen()">Nút 1: Ho ten</button>
+<button name="donvi" value="Don vi" onclick="displayDonVi()">Nút 2: Don vi</button>
+<input type="text" id="ixthoten" value="Chao">
+<input type="text" id="txtdonvi" value="Don vi">
+
+<script>
+function displayHoTen() {
+    var textBox = document.getElementById("ixthoten");
+    alert(textBox.value);
+}
+
+function displayDonVi() {
+    var textBox = document.getElementById("txtdonvi");
+    alert(textBox.value);
+}
+</script>
+
+</body>
+</html>
